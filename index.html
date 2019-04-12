@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <title>Document</title>
+</head>
+<body>
+    
+	<div id="root"></div>
+	<script>
+		class MyComponent extends React.Component {
+			render() {
+				//return <h1>{this.props.title}</h1>
+				return React.createElement('h1', null, `Title: ${this.props.title}`)
+			}
+		}
+
+		//ReactDom.render(<MyComponent title="Hey" />, document.getElementById('root'))
+		ReactDOM.render(React.createElement(MyComponent, {title: 'Hello'}),document.getElementById('root'))
+	</script>
+
+</body>
+</html>
