@@ -1,5 +1,5 @@
 module.exports =  (env, argv) => {
-	var config {
+	var config = {
 		entry: './src/index.js',
 		output: {
 			filename: 'bundle.js'
