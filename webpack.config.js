@@ -1,3 +1,5 @@
+const autoprefixer = require('autoprefixer');
+
 module.exports =  (env, argv) => {
 	function isDevelopment() {
 		return argv.mode === 'development';
@@ -35,6 +37,14 @@ module.exports =  (env, argv) => {
 					use: [
 						'style-loader',
 						'css-loader',
+						{
+							loader: 'postcss-loader',
+							options: {
+								plugins: [
+									autoprefixer()
+								]	
+							}
+						},
 						'sass-loader'
 					]
 				}
