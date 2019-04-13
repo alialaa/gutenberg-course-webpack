@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react';
+import './MyComponent.scss';
 
 class MyComponent extends React.Component {
 	render() {
@@ -9,7 +10,7 @@ class MyComponent extends React.Component {
 		// 	<p></p>
 		// </Fragment>
 		//return React.createElement('h1', null, `Title: ${this.props.title}`)
-		return <div>
+		return <div className="x">
 				{[1,2,3].map(item => <div>{item}</div>)}
 		</div>
 	}
