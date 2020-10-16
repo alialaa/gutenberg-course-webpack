@@ -3,6 +3,7 @@ const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CleanPlugin = require('clean-webpack-plugin');
+const path = require('path');
 
 module.exports =  (env, argv) => {
 	function isDevelopment() {
@@ -11,7 +12,8 @@ module.exports =  (env, argv) => {
 	var config = {
 		entry: './src/index.js',
 		output: {
-			filename: 'bundle.js'
+			filename: 'bundle.js',
+			path: path.resolve(__dirname, './dist')
 		},
 		optimization: {
 			minimizer: [
