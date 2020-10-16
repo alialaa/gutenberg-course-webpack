@@ -7,7 +7,7 @@ module.exports =  (env, argv) => {
 		output: {
 			filename: 'bundle.js'
 		},
-		devtool: isDevelopment() ? 'cheap-module-eval-source-map' : 'source-map',
+		devtool: isDevelopment() ? 'cheap-module-source-map' : 'source-map',
 		module: {
 			rules: [
 				{
